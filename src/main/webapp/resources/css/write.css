@@ -1,0 +1,101 @@
+@charset "EUC-KR";
+
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+.hero {
+	min-height: 100vh;
+	width : 100%;
+	background-color: #000;
+	background-image: url(../img/com/root.gif);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    color: #ffff;
+    padding: 0 8%;
+}
+
+nav{
+	display: flex;
+	align-items: space-between;
+	justify-content: space-between;
+}
+
+.logo{
+	width:160px;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 30px;
+}
+
+nav ul li a {
+	color: #ffff;
+	text-decoration: none;
+}
+
+.hero button {
+	background : #393939;
+	border : 0;
+	outline : none;
+	padding: 15px 35px;
+	color : #fff;
+	margin-top: 25px;
+	letter-spacing: 1px;
+	cursor: pointer; 
+}
+
+.indicator span {
+	display: inline-block;
+	background : #3a3a3a;
+	height : 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.indicator {
+	margin-top:  150px;
+}
+
+.indicator span.active {
+	background: #bfbfbf;
+}
+.writeDiv{
+    margin-top: 15%;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-left: 40%;
+}
+
+.writeDiv .write-item {
+    /* font-size: 15px; */
+    margin-top: 3%;
+}
+
+.writeDiv label {    
+    font-size: 15px;
+    font-family: 'Jeju Myeongjo', sans-serif;
+}
+
+.comInput {
+    background: transparent;
+    border: solid 1px white;
+    border-top: none;
+    border-right: none;
+    border-left: none; 
+    margin-top: 1vh; 
+    color: #00c3ffc2;
+    width: 20vw;
+}
+
+.comInput:focus{    
+    outline:0px ;
+    border-color:#00c3ffc2;
+}
