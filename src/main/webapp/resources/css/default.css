@@ -7,6 +7,11 @@
 	font-family: 'poppins', sans-serif;
 }
 
+li{
+	list-style: none;
+}
+
+
 .hero {
 	min-height: 100vh;
 	width : 100%;
@@ -40,9 +45,20 @@ nav ul li a {
 	text-decoration: none;
 }
 
-.hero h1 {
+#slide{
+	overflow: hidden;	
+}
+
+#slide .cnt {
+	white-space: nowrap;
+}
+
+#slide .cnt li {
 	font-size: 75px;
 	margin-top: 12%;
+    width: 100%;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .hero button {
@@ -63,10 +79,11 @@ nav ul li a {
 	width: 15px;
 	border-radius: 50%;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 .indicator {
-	margin-top:  150px;
+	margin-top:  10px;	
 }
 
 .indicator span.active {

@@ -1,81 +1,11 @@
 @charset "EUC-KR";
 
-*{
-	margin : 0;
-	padding : 0;
-	box-sizing: border-box;
-	font-family: 'poppins', sans-serif;
-}
-
-.hero {
-	min-height: 100vh;
-	width : 100%;
-	background-color: #000;
-	background-image: url(../img/com/root.gif);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: 20%;
-    color: #ffff;
-    padding: 0 8%;
-}
-
-nav{
-	display: flex;
-	align-items: space-between;
-	justify-content: space-between;
-}
-
-.logo{
-	width:160px;
-}
-
-nav ul li {
-	display: inline-block;
-	list-style: none;
-	margin: 10px 30px;
-}
-
-nav ul li a {
-	color: #ffff;
-	text-decoration: none;
-}
-
-.hero button {
-	background : #393939;
-	border : 0;
-	outline : none;
-	padding: 15px 35px;
-	color : #fff;
-	margin-top: 25px;
-	letter-spacing: 1px;
-	cursor: pointer; 
-}
-
-.indicator span {
-	display: inline-block;
-	background : #3a3a3a;
-	height : 15px;
-	width: 15px;
-	border-radius: 50%;
-	margin-right: 10px;
-}
-
-.indicator {
-	margin-top:  150px;
-}
-
-.indicator span.active {
-	background: #bfbfbf;
-}
 .writeDiv{
     margin-top: 15%;
-    /* display: flex; */
-    /* justify-content: center; */
     margin-left: 40%;
 }
 
 .writeDiv .write-item {
-    /* font-size: 15px; */
     margin-top: 3%;
 }
 
@@ -98,4 +28,62 @@ nav ul li a {
 .comInput:focus{    
     outline:0px ;
     border-color:#00c3ffc2;
+}
+
+/* list.html */
+.listTable{
+	width: 70%;
+	height: 50%;	
+	border: solid 0px white;
+	margin-top: 10%;
+	margin-left: 15%;
+}
+.listTable tr{
+	border: solid 0.px white;
+	color : white;
+}
+thead th:nth-child(1) {
+	width: 5%;
+ }
+ 
+thead th:nth-child(2) {
+	width: 5%;
+}
+ 
+thead th:nth-child(3) {
+	width: 60%;
+}
+ 
+thead th:nth-child(4) {
+	width: 30%;
+}
+ 
+th, td {
+	padding: 20px;
+	text-align: center;
+}
+ 
+tbody tr:nth-child(odd) {
+	background-color: #66626594;
+ }
+ 
+tbody tr:nth-child(even) {
+	background-color: #afa8af8c;
+}
+
+.list_btn {
+	background : #393939;
+	border : 0;
+	outline : none;
+	padding: 15px 35px;
+	color : #fff;
+	margin-left: 5%;
+	letter-spacing: 1px;
+	cursor: pointer; 
+}
+
+.wrap_btn {
+	outline : none;
+	margin-top: 15px;
+	margin-left: 10%;
 }
