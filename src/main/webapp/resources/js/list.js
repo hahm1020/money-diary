@@ -1,0 +1,7 @@
+/**
+ * hsw
+ */
+
+window.onload = function () {
+	
+};
