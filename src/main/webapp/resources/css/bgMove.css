@@ -1,0 +1,40 @@
+@charset "EUC-KR";
+
+.smHero {
+	min-height: 100vh;
+	width : 100%;
+	background-color: #000;
+	background-image: url(../img/com/root.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    color: #ffff;
+    padding: 0 8%;
+    animation-duration : 2s;		/* 애니메이션 완료시간 */
+    animation-fill-mode : forwards; /* 애니메이션 끝나고 끝난값 적용 (시작값은 backwards) */
+    animation-name : bg;    		/* 애니메이션 이름 */
+}
+
+.smHero .btn {
+	background : #393939;
+	border : 0;
+	outline : none;
+	padding: 15px 35px;
+	color : #fff;
+	margin-top: 25px;
+	letter-spacing: 1px;
+	cursor: pointer; 
+}
+
+/* 애니메이션 효과 */
+@keyframes bg {
+	0% {
+		background-size: 70%;
+		background-position: center;
+	}
+	
+	100% {
+		background-size: 20%;
+		background-position: right bottom;
+	}
+}

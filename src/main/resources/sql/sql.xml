@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="expDAO">
+
+<insert id="insertWrite">   
+	/** expDAO.insertWrite 2021-11-05 hsw **/
+	INSERT INTO PUBLIC.EXPENSE
+		(
+			ITEM
+			,DATE
+			,COST
+			,LC
+			,ETC
+			,ID
+		) 
+	VALUES 
+		(
+			#{item}
+			,#{date}
+			,#{cost}::numeric
+			,#{lc}
+			,#{etc}
+			,#{id}
+		)
+</insert>
+
+
+<select id="selectExpList" parameterType="com.hsw.exp.service.expenseVO" resultType="com.hsw.exp.service.expenseVO">
+	/** expDAO.selectExpList 2021-11-04 hsw **/
+	SELECT item, "date", "cost", lc, etc, id, no 
+	FROM PUBLIC.EXPENSE
+	ORDER BY "date" DESC
+</select>
+
+<delete id="deleteList">
+	/** expDAO.deleteList 2021-11-05 hsw **/
+	DELETE FROM PUBLIC.EXPENSE
+	WHERE NO IN (
+		<foreach collection="array" item="arr" separator=",">
+		 #{arr}::numeric
+		</foreach>
+	)
+	
+</delete>
+
+</mapper> 

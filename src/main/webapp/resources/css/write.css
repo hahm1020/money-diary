@@ -35,39 +35,39 @@
 	width: 70%;
 	height: 50%;	
 	border: solid 0px white;
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-left: 15%;
 }
 .listTable tr{
 	border: solid 0.px white;
 	color : white;
 }
-thead th:nth-child(1) {
+.listTable thead th:nth-child(1) {
 	width: 5%;
  }
  
-thead th:nth-child(2) {
-	width: 5%;
+.listTable thead th:nth-child(2) {
+	width: 10%;
 }
  
-thead th:nth-child(3) {
-	width: 60%;
+.listTable thead th:nth-child(3) {
+	width: 57%;
 }
  
-thead th:nth-child(4) {
-	width: 30%;
+.listTable thead th:nth-child(4) {
+	width: 28%;
 }
  
-th, td {
+.listTable th, td {
 	padding: 20px;
 	text-align: center;
 }
  
-tbody tr:nth-child(odd) {
+.listTable tbody tr:nth-child(odd) {
 	background-color: #66626594;
  }
  
-tbody tr:nth-child(even) {
+.listTable tbody tr:nth-child(even) {
 	background-color: #afa8af8c;
 }
 
