@@ -11,6 +11,7 @@
 			,DATE
 			,COST
 			,LC
+			,DETAIL_LC
 			,ETC
 			,ID
 		) 
@@ -20,6 +21,7 @@
 			,#{date}
 			,#{cost}::numeric
 			,#{lc}
+			,#{detailLc}
 			,#{etc}
 			,#{id}
 		)
@@ -31,6 +33,13 @@
 	SELECT item, "date", "cost", lc, etc, id, no 
 	FROM PUBLIC.EXPENSE
 	ORDER BY "date" DESC
+	limit #{cntPerPage} offset #{start}
+</select>
+
+<select id="selectExpTotalList" parameterType="com.hsw.exp.service.expenseVO" resultType="int">
+	/** expDAO.selectExpTotalList 2021-11-04 hsw **/
+	SELECT count(*) 
+	FROM PUBLIC.EXPENSE
 </select>
 
 <delete id="deleteList">
@@ -43,5 +52,12 @@
 	)
 	
 </delete>
+
+<select id="selectMapList" parameterType="com.hsw.exp.service.expenseVO" resultType="com.hsw.exp.service.expenseVO">
+	/** expDAO.selectMapList 2021-11-10 hsw **/
+	SELECT item, "date", "cost", lc, etc, id, no 
+	FROM PUBLIC.EXPENSE
+	ORDER BY "date" DESC
+</select>
 
 </mapper> 

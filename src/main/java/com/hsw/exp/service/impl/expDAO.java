@@ -26,4 +26,12 @@ public class expDAO {
 		sqlSession.delete("expDAO.deleteList", param);
 	}
 
+	public int selectExpTotalList(expenseVO vo) {
+		return sqlSession.selectOne("expDAO.selectExpTotalList", vo);
+	}
+
+	public List<expenseVO> selectMapList(expenseVO vo) {
+		return sqlSession.selectList("expDAO.selectMapList", vo);
+	}
+
 }

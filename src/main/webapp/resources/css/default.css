@@ -1,91 +1,24 @@
 @charset "EUC-KR";
 
-*{
-	margin : 0;
-	padding : 0;
-	box-sizing: border-box;
-	font-family: 'poppins', sans-serif;
-}
+*{margin : 0;padding : 0;box-sizing: border-box;font-family: 'poppins', sans-serif;}
 
-li{
-	list-style: none;
-}
+li{	list-style: none;}
 
+.hero {min-height: 100vh;width : 100%;background-color: #000;background-image: url(../img/com/root.gif);background-position: center;background-repeat: no-repeat;background-size: 70%;color: #ffff;padding: 0 8%;}
 
-.hero {
-	min-height: 100vh;
-	width : 100%;
-	background-color: #000;
-	background-image: url(../img/com/root.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 70%;
-    color: #ffff;
-    padding: 0 8%;
-}
+nav{display: flex;align-items: space-between;justify-content: space-between;}
 
-nav{
-	display: flex;
-	align-items: space-between;
-	justify-content: space-between;
-}
+.logo{width:160px;}
 
-.logo{
-	width:160px;
-}
+nav ul li {display: inline-block;list-style: none;margin: 10px 30px;}
+nav ul li a {color: #ffff;text-decoration: none;}
 
-nav ul li {
-	display: inline-block;
-	list-style: none;
-	margin: 10px 30px;
-}
+#slide{overflow: hidden;}
+#slide .cnt {white-space: nowrap;}
+#slide .cnt li {font-size: 75px;margin-top: 12%;width: 100%;vertical-align: middle; display: inline-block;}
 
-nav ul li a {
-	color: #ffff;
-	text-decoration: none;
-}
+.hero button {background : #393939;border : 0;outline : none;padding: 15px 35px;color : #fff;margin-top: 25px;letter-spacing: 1px;cursor: pointer;}
 
-#slide{
-	overflow: hidden;	
-}
-
-#slide .cnt {
-	white-space: nowrap;
-}
-
-#slide .cnt li {
-	font-size: 75px;
-	margin-top: 12%;
-    width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-}
-
-.hero button {
-	background : #393939;
-	border : 0;
-	outline : none;
-	padding: 15px 35px;
-	color : #fff;
-	margin-top: 25px;
-	letter-spacing: 1px;
-	cursor: pointer; 
-}
-
-.indicator span {
-	display: inline-block;
-	background : #3a3a3a;
-	height : 15px;
-	width: 15px;
-	border-radius: 50%;
-	margin-right: 10px;
-	cursor: pointer;
-}
-
-.indicator {
-	margin-top:  10px;	
-}
-
-.indicator span.active {
-	background: #bfbfbf;
-}
+.indicator span {display: inline-block;background : #3a3a3a;height : 15px;width: 15px;border-radius: 50%;margin-right: 10px;cursor: pointer;}
+.indicator {margin-top:  10px;}
+.indicator span.active {background: #bfbfbf;}

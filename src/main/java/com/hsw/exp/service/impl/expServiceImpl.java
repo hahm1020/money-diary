@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.hsw.exp.service.expService;
 import com.hsw.exp.service.expenseVO;
+import com.hsw.exp.service.pagingVO;
 
 @Service
 public class expServiceImpl implements expService {
@@ -25,12 +26,26 @@ public class expServiceImpl implements expService {
 
 	@Override
 	public List<expenseVO> selectExpList(expenseVO vo) {
+		
+		int totalCount = expDAO.selectExpTotalList(vo);
+		
+		//paging
+		vo.setTotal(totalCount);
+		vo.calcEndPage(vo.getTotal());
+		vo.calcStartEndPage();
+		vo.calcStartEnd();
+		
 		return expDAO.selectExpList(vo);
 	}
 
 	@Override
 	public void deleteList(String[] param) {
 		expDAO.deleteList(param);
+	}
+
+	@Override
+	public List<expenseVO> selectMapList(expenseVO vo) {
+		return expDAO.selectMapList(vo);
 	}
 
 }

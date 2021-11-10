@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<jsp:include page='header.jsp' flush="false"/>
+<jsp:include page='../com/header.jsp' flush="false"/>
 
 <h1>Hahm</h1>
 <button type="button">Write the expense</button>
@@ -11,4 +11,4 @@
 	<span class="active"></span>
 </div>
 
-<jsp:include page="bottom.jsp" flush="false"/>
+<jsp:include page="../com/bottom.jsp" flush="false"/>

@@ -1,89 +1,22 @@
 @charset "EUC-KR";
 
-.writeDiv{
-    margin-top: 15%;
-    margin-left: 40%;
-}
+.writeDiv{margin-top: 15%;margin-left: 40%;}
+.writeDiv .write-item {margin-top: 3%;}
+.writeDiv label {font-size: 15px;font-family: 'Jeju Myeongjo', sans-serif;}
 
-.writeDiv .write-item {
-    margin-top: 3%;
-}
+.comInput {background: transparent;border: solid 1px white;border-top: none;border-right: none;border-left: none; margin-top: 1vh; color: #00c3ffc2;width: 20vw;}
+.comInput:focus{outline:0px;border-color:#00c3ffc2;}
 
-.writeDiv label {    
-    font-size: 15px;
-    font-family: 'Jeju Myeongjo', sans-serif;
-}
+/* list */
+.listTable{width: 70%;height: 90%;border: solid 0px white;margin-top: 0%;margin-left: 15%;}
+.listTable tr{border: solid 0.px white;color : white;}
+.listTable thead th:nth-child(1) {width: 5%;}
+.listTable thead th:nth-child(2) {width: 10%;}
+.listTable thead th:nth-child(3) {width: 57%;}
+.listTable thead th:nth-child(4) {width: 28%;}
+.listTable th, td {padding: 15px;text-align: center;}
+.listTable tbody tr:nth-child(odd) {background-color: #66626594;}
+.listTable tbody tr:nth-child(even) {background-color: #afa8af8c;}
+.list_btn {background : #393939;border : 0;outline : none;padding: 3px 35px;color : #fff;margin-left: 5%;letter-spacing: 1px;cursor: pointer;}
 
-.comInput {
-    background: transparent;
-    border: solid 1px white;
-    border-top: none;
-    border-right: none;
-    border-left: none; 
-    margin-top: 1vh; 
-    color: #00c3ffc2;
-    width: 20vw;
-}
-
-.comInput:focus{    
-    outline:0px ;
-    border-color:#00c3ffc2;
-}
-
-/* list.html */
-.listTable{
-	width: 70%;
-	height: 50%;	
-	border: solid 0px white;
-	margin-top: 5%;
-	margin-left: 15%;
-}
-.listTable tr{
-	border: solid 0.px white;
-	color : white;
-}
-.listTable thead th:nth-child(1) {
-	width: 5%;
- }
- 
-.listTable thead th:nth-child(2) {
-	width: 10%;
-}
- 
-.listTable thead th:nth-child(3) {
-	width: 57%;
-}
- 
-.listTable thead th:nth-child(4) {
-	width: 28%;
-}
- 
-.listTable th, td {
-	padding: 20px;
-	text-align: center;
-}
- 
-.listTable tbody tr:nth-child(odd) {
-	background-color: #66626594;
- }
- 
-.listTable tbody tr:nth-child(even) {
-	background-color: #afa8af8c;
-}
-
-.list_btn {
-	background : #393939;
-	border : 0;
-	outline : none;
-	padding: 15px 35px;
-	color : #fff;
-	margin-left: 5%;
-	letter-spacing: 1px;
-	cursor: pointer; 
-}
-
-.wrap_btn {
-	outline : none;
-	margin-top: 15px;
-	margin-left: 10%;
-}
+.wrap_btn {outline : none;margin-top: 15px;margin-left: 10%;position: absolute;width: 30%;bottom: 35;right: 163px;}

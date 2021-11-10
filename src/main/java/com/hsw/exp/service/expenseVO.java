@@ -1,6 +1,6 @@
 package com.hsw.exp.service;
 
-public class expenseVO {
+public class expenseVO extends pagingVO {
 	
 	private String item;
 	private String date;
@@ -9,6 +9,7 @@ public class expenseVO {
 	private String id;
 	private String cost;
 	private Integer no;
+	private String detailLc;
 	
 	
 	public String getItem() {
@@ -52,6 +53,12 @@ public class expenseVO {
 	}
 	public void setNo(Integer no) {
 		this.no = no;
+	}
+	public String getDetailLc() {
+		return detailLc;
+	}
+	public void setDetailLc(String detailLc) {
+		this.detailLc = detailLc;
 	}
 	
 	

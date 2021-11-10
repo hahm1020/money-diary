@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hsw.exp.service.expService;
 import com.hsw.exp.service.expenseVO;
 
@@ -26,7 +28,7 @@ public class expController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String introVw(Locale locale, Model model) {
-		return "intro";
+		return "/com/intro";
 	}
 	
 	@RequestMapping(value="/hsw/exp/listVw.do") 
@@ -34,14 +36,14 @@ public class expController {
 													, Model model) {
 		
 		List<expenseVO> expensVOList = expService.selectExpList(vo);
-		model.addAttribute("expenseVO", expensVOList);
+		model.addAttribute("expensVOList", expensVOList);
 		
-		return "list";
+		return "/crud/list";
 	}
 	
 	@RequestMapping(value="/hsw/exp/writeVw.do") 
 	public String writeVw() {
-		return "write";
+		return "/crud/write";
 	}
 	
 	@RequestMapping(value="/hsw/exp/write.do") 
@@ -52,7 +54,7 @@ public class expController {
 			if(expService.insertWrite(VO) > 0) {
 				return "redirect:/hsw/exp/listVw.do";
 			} else {
-				return "write";
+				return "/crud/write";
 			}
 			
 		} catch (Exception e) {
@@ -79,5 +81,17 @@ public class expController {
 		}
 		
 		return "redirect:/hsw/exp/listVw.do";
+	}
+	
+	@RequestMapping(value="/hsw/exp/mapVw.do") 
+	public String mapVw(@ModelAttribute("expenseVO") expenseVO vo 
+													, Model model) throws JsonProcessingException {
+		
+		List<expenseVO> expensVOList = expService.selectMapList(vo);
+		ObjectMapper objMapper = new ObjectMapper();
+		
+		model.addAttribute("expenseVO", objMapper.writeValueAsString(expensVOList));
+		
+		return "/map/map";
 	}
 }

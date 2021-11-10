@@ -7,5 +7,7 @@ public interface expService {
 	
 	List<expenseVO> selectExpList(expenseVO vo);
 	
+	List<expenseVO> selectMapList(expenseVO vo);
+	
 	void deleteList(String[] param);
 }

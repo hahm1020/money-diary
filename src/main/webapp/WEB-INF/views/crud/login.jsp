@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<jsp:include page='header.jsp' flush="false"/>
+<jsp:include page='../com/header.jsp' flush="false"/>
 
 <div class="writeDiv">
 
@@ -24,4 +24,4 @@
 
 </div>
 
-<jsp:include page="bottom.jsp" flush="false"/>
+<jsp:include page="../com/bottom.jsp" flush="false"/>

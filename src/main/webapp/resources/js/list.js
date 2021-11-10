@@ -23,6 +23,13 @@ fn_deleteList = () => {
 	const listForm = document.getElementById("listForm");
 	listForm.action = "/hsw/exp/delete.do"
 	listForm.submit();
+}
+
+fn_pagingForm = (page) => {
 	
+	document.getElementById('nowPage').value = page;
 	
+	const listForm = document.getElementById("listForm");
+	listForm.action = "/hsw/exp/listVw.do";
+	listForm.submit();
 }
