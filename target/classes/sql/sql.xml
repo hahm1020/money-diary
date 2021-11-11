@@ -14,6 +14,8 @@
 			,DETAIL_LC
 			,ETC
 			,ID
+			,X
+			,Y
 		) 
 	VALUES 
 		(
@@ -24,6 +26,8 @@
 			,#{detailLc}
 			,#{etc}
 			,#{id}
+			,#{x}
+			,#{y}
 		)
 </insert>
 
@@ -55,8 +59,9 @@
 
 <select id="selectMapList" parameterType="com.hsw.exp.service.expenseVO" resultType="com.hsw.exp.service.expenseVO">
 	/** expDAO.selectMapList 2021-11-10 hsw **/
-	SELECT item, "date", "cost", lc, etc, id, no 
+	SELECT item, "date", "cost", lc, etc, id, no ,x , y 
 	FROM PUBLIC.EXPENSE
+	WHERE LC IS NOT NULL
 	ORDER BY "date" DESC
 </select>
 

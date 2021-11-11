@@ -10,7 +10,8 @@ public class expenseVO extends pagingVO {
 	private String cost;
 	private Integer no;
 	private String detailLc;
-	
+	private String x; 
+	private String y;
 	
 	public String getItem() {
 		return item;
@@ -59,6 +60,18 @@ public class expenseVO extends pagingVO {
 	}
 	public void setDetailLc(String detailLc) {
 		this.detailLc = detailLc;
+	}
+	public String getX() {
+		return x;
+	}
+	public void setX(String x) {
+		this.x = x;
+	}
+	public String getY() {
+		return y;
+	}
+	public void setY(String y) {
+		this.y = y;
 	}
 	
 	

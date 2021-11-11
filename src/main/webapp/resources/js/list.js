@@ -10,7 +10,7 @@ window.onload = function () {
 };
 
 
-fn_deleteList = () => {
+const fn_deleteList = () => {
 	let chk_list = document.querySelectorAll('[name="chk-item"]');
 	let del_list = []; 
 	
@@ -25,7 +25,7 @@ fn_deleteList = () => {
 	listForm.submit();
 }
 
-fn_pagingForm = (page) => {
+const fn_pagingForm = (page) => {
 	
 	document.getElementById('nowPage').value = page;
 	

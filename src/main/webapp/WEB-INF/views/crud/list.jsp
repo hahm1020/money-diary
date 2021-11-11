@@ -41,7 +41,7 @@
 		</div>
 		
 		<!--paging -->
-		<div style="display: block; text-align: center;">		
+		<div id="wrap-paging" style="display: block; text-align: center;">		
 		<c:if test="${expenseVO.startPage != 1 }">
 			<a href="javascript:fn_pagingForm(${expenseVO.startPage - 1 });">&lt;</a>
 		</c:if>

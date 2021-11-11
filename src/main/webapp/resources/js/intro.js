@@ -18,5 +18,4 @@ const fnMoveBanner = (data) => {
 			banner[i].style.display = "none";		
 		}
 	}
-	
 }

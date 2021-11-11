@@ -3,9 +3,12 @@
 
 <jsp:include page='../com/header.jsp' flush="false"/>
 
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c467260d5b80298d707a1219a6be9ebd&libraries=services,clusterer,drawing"></script> <!-- 노트북 appkey -->
 <script type="text/javascript" src="/resources/js/write.js"></script>
 
 	<form id="submitForm" action="/hsw/exp/write.do">		
+		<input type="hidden" id="x" name="x" value="">
+		<input type="hidden" id="y" name="y" value="">
 	
 		<div class="writeDiv">
 		    <div id="" class="write-item">
@@ -25,7 +28,7 @@
 		    <div id="" class="write-item">
 		        <label for="lc" class="">장소</label>
 		        <div class="">
-		            <input id="lc" name ="lc" class="comInput" type="text" value="" onfocus="sample2_execDaumPostcode();">
+		            <input id="lc" name ="lc" class="comInput" type="text" value="" onfocus="sample2_execDaumPostcode();" readonly>
 		        </div>
 		    </div>
 		    

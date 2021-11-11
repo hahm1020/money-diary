@@ -18,7 +18,10 @@
 const global = JSON.parse('${expenseVO}');
 window.onload = () =>{
 	
-	fn_drawMaker();
+// 	fn_drawMaker();
+	
+	// 맵 위치를 중심점.
+	map.setBounds(bounds);
 	
 }
 </script>

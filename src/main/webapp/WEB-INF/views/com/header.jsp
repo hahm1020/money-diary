@@ -30,11 +30,11 @@
 	<div class="hero">
 		<nav>
 			<a href="javascript:fnMovePage('/');" title="인트로 페이지로 이동">
-				<img alt="" src="/resources/img/com/planetX-logo.png" class="logo">
+				<img alt="home" src="/resources/img/com/planetX-logo.png" class="logo">
 			</a>
 			<ul>
 				<li><a href="javascript:fnMovePage('/');">Home</a></li>
-<!-- 				<li><a href="">About</a></li> -->
+				<li><a href="javascript:fnMovePage('/hsw/exp/mapVw.do');">Map</a></li>
 <!-- 				<li><a href="">Contact</a></li> -->
 				<li><a href="javascript:fnMovePage('/hsw/exp/loginVw.do');">login</a></li>
 			</ul>
