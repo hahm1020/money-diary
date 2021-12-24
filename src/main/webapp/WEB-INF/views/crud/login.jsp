@@ -15,7 +15,7 @@
     <div id="" class="write-item">
         <label for="" class="">PW</label>
         <div class="">
-            <input id="" class="comInput" type="email" required="" value=""></textarea>
+            <input id="" class="comInput" type="email" required="" value=""/>
         </div>
     </div>
 

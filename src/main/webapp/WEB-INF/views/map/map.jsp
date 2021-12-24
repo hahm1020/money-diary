@@ -18,11 +18,8 @@
 const global = JSON.parse('${expenseVO}');
 window.onload = () =>{
 	
-// 	fn_drawMaker();
-	
 	// 맵 위치를 중심점.
 	map.setBounds(bounds);
-	
 }
 </script>
 <body>
@@ -31,14 +28,6 @@ window.onload = () =>{
 		<a href="javascript:fnMovePage('/');" title="인트로 페이지로 이동">
 			<img alt="" src="/resources/img/com/planetX-logo.png" class="logo" style="width:100%;">	
 		</a>
-		
-<!-- 		<ul class="nav nav-pills nav-flush flex-column mb-auto text-center"> -->
-<!-- 			<li class="li-item">a</li> -->
-<!-- 			<li class="li-item">b</li> -->
-<!-- 			<li class="li-item">c</li> -->
-<!-- 			<li class="li-item">d</li> -->
-<!-- 		</ul> -->
-		    
 	</div>
 	
 	<div id="map" style="width:100%; height:100%;">
