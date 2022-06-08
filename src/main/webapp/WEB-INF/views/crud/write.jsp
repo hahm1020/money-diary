@@ -4,7 +4,6 @@
 <jsp:include page='../com/header.jsp' flush="false"/>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c467260d5b80298d707a1219a6be9ebd&libraries=services,clusterer,drawing"></script> <!-- 노트북 appkey -->
-<script type="text/javascript" src="/resources/js/write.js"></script>
 
 	<form id="submitForm" action="/hsw/exp/write.do">		
 		<input type="hidden" id="x" name="x" value="">
@@ -50,14 +49,19 @@
 			<img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()"  alt="닫기 버튼">
 			</div>
 		
-		    <button type="button" class="btn" onClick="fn_insertForm();">save&#8594;</button>
+		    <button type="button" id="saveBtn" class="btn">save&#8594;</button>
+<!-- 		    <button type="button" class="btn" onClick="fn_insertForm();">save&#8594;</button> -->
 		    <button type="button" class="btn" onClick="fnMovePage('/hsw/exp/listVw.do');">list&#8594;</button>
+<!-- 		    <button type="button" class="btn" id="test" >list&#8594;</button> -->
 		</div>
 		
 	</form>
 	
+<script type="text/javascript" src="/resources/js/write.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
+<script> 
+	new writeModule();
+	
     // 우편번호 찾기 화면을 넣을 element
     var element_layer = document.getElementById('layer');
 

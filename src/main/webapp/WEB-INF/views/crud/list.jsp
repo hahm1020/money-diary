@@ -3,10 +3,6 @@
 
 <jsp:include page='../com/header.jsp' flush="false"/>
 
-	<script type="text/javascript" src="/resources/js/list.js"></script>
-	<script>
-	</script>
-	
 	<form id="listForm">
 	
 		<input type="hidden" name="delList" id="delList">
@@ -37,12 +33,14 @@
 	
 		<div class="wrap_btn">
 		    <button type="button" class="list_btn" onClick="fnMovePage('/hsw/exp/writeVw.do');" >write&#8594;</button>
-		    <button type="button" class="list_btn" onClick="fn_deleteList('/hsw/exp/deleteList.do');" >delete&#8594;</button>
+<!-- 		    <button type="button" class="list_btn" onClick="fn_deleteList('/hsw/exp/deleteList.do');" >delete&#8594;</button> -->
+		    <button type="button" id="deleteBtn" class="list_btn">delete&#8594;</button>
 		</div>
 		
 		<!--paging -->
-		<div id="wrap-paging" style="display: block; text-align: center;">		
+		<div id="wrap_paging" style="display: block; text-align: center;">		
 		<c:if test="${expenseVO.startPage != 1 }">
+			<a href="javascript:fn_pagingForm(${expenseVO.startPage - 1 });">&lt;</a>
 			<a href="javascript:fn_pagingForm(${expenseVO.startPage - 1 });">&lt;</a>
 		</c:if>
 		<c:forEach begin="${expenseVO.startPage }" end="${expenseVO.endPage }" var="p">
@@ -60,5 +58,9 @@
 		</c:if>
 	</div>
 	</form>
-
+	
+<script type="text/javascript" src="/resources/js/list.js"></script>
+<script>
+	new listModule(); 
+</script>
 <jsp:include page="../com/bottom.jsp" flush="false"/>

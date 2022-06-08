@@ -94,4 +94,16 @@ public class expController {
 		
 		return "/map/map";
 	}
+	
+//	@RequestMapping(value="/hsw/exp/loginVw.do")
+//	public String loginVw(@ModelAttribute("expenseVO") expenseVO vo 
+//			, Model model) throws JsonProcessingException {
+//
+//		List<expenseVO> expensVOList = expService.selectMapList(vo);
+//		ObjectMapper objMapper = new ObjectMapper();
+//		
+//		model.addAttribute("expenseVO", objMapper.writeValueAsString(expensVOList));
+//		
+//		return "/map/map";
+//	}
 }
