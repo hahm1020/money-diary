@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/resources/css/map.css">
 
 <script type="text/javascript" src="/resources/js/common.js"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c467260d5b80298d707a1219a6be9ebd&libraries=services,clusterer,drawing"></script> <!-- 노트북 appkey -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c467260d5b80298d707a1219a6be9ebd&libraries=services,clusterer,drawing"></script> <!-- 노트북 appkey port 20002만 사용가능-->
 
 <script>
 const global = JSON.parse('${expenseVO}');
